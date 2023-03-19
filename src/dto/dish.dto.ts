@@ -1,22 +1,21 @@
-import { IsString } from 'class-validator';
+import { Optional } from '@nestjs/common';
+import { IsNumber, IsString } from 'class-validator';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Dishes {
-  @PrimaryGeneratedColumn()
+export class Dish {
+  @IsNumber()
   id: number;
 
-  @Column()
   @IsString()
   name: string;
 
-  @Column()
   @IsString()
   desc: string;
 
-  @Column()
+  @IsString()
   image: string;
 
-  @Column()
+  @IsString()
   price: string;
 }

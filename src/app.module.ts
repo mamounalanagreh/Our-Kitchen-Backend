@@ -1,12 +1,13 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AccountsService } from './accounts.service';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { DishModule } from './dish/dish.module';
+import { SchemaModule } from './dish/schema.module';
 
 @Module({
   imports: [
-    DishModule,
+    SchemaModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -19,6 +20,6 @@ import { DishModule } from './dish/dish.module';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AccountsService],
 })
 export class AppModule {}

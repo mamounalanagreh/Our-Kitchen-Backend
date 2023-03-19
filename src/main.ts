@@ -7,6 +7,7 @@ async function bootstrap() {
   const port = 3001;
 
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
   await app.listen(port);
 
   logger.log(`Application is listening on Port: ${port}...`);

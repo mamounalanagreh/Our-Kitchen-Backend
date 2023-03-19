@@ -2,21 +2,24 @@ import { IsString } from 'class-validator';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Dishes {
+export class Accounts {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
   @IsString()
-  name: string;
+  username: string;
 
   @Column()
   @IsString()
-  desc: string;
+  email: string;
 
   @Column()
-  image: string;
+  password: string;
 
   @Column()
-  price: string;
+  role: string;
+
+  @Column('int', { array: true })
+  orders: number[];
 }
