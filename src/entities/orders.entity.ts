@@ -13,4 +13,7 @@ export class Orders {
 
   @Column()
   date: string;
+
+  @Column()
+  shipping: string;
 }

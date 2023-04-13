@@ -9,4 +9,7 @@ export class OrderDto {
 
   @IsString()
   date: string;
+
+  @IsString()
+  shipping: string;
 }
