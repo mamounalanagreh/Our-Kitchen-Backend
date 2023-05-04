@@ -12,7 +12,7 @@ import { SchemaModule } from './dish/schema.module';
       type: 'postgres',
       host: 'localhost',
       port: 5431,
-      username: 'momenanagreh',
+      username: 'mamounanagreh',
       password: '1234',
       database: 'template1',
       autoLoadEntities: true,
